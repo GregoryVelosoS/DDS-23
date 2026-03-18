@@ -1,0 +1,66 @@
+body{
+    background-color: violet;
+    color: white;
+    text-align: center;
+}
+
+#bloco{
+    background-color: black;
+    display: block;
+}
+
+
+
+#quad1{
+    background-color: red;
+}
+
+#quad2{
+    background-color: yellow;
+    /* margin-top: 20px; */
+}
+
+#quad3{
+    background-color: green;
+}
+
+
+
+#bloco-linha{
+    background-color: blue;
+}
+
+#linha{
+    background-color: orange;
+}
+
+.quad{
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    text-shadow: 2px 2px black;
+    /* float: left; */
+    /* display: inline-block; */
+    /* display: inline; */
+}
+#flex{
+    background-color: rgb(26, 255, 228);
+    display: flex;
+    height: 500px;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: center; */
+    /* align-content: center; */
+    flex-flow: row nowrap;
+}
+
+#quad1{
+    /* capacidade de aumentar */
+ flex-grow: 1;
+}
+
+#quad2{
+    /* capacidade de diminuir */
+    flex-shrink: 0;
+}
