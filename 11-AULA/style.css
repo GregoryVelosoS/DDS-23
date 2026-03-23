@@ -1,0 +1,70 @@
+body{
+    background-color: azure;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+
+.quad{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-shadow: 5px 5px black;
+}
+
+#quad1{
+    background-color: red;
+}
+
+#quad2{
+    background-color: yellow;
+}
+
+#quad3{
+    background-color: green;
+}
+
+#grid{
+    background-color: blue;
+    height: 900px;
+    display: grid;
+    /* grid-template-rows: 200px 500px 100px;
+    grid-template-columns: 30% 65%; */
+    grid-template: 1fr 1fr / 1fr 2fr 1fr;
+    grid-gap: 10px;
+    justify-items: center; /* start center end*/
+    align-items: end; /* start center end*/
+}
+
+
+#grid2{
+    display: grid;
+    background-color: burlywood;
+    grid-template-rows: 200px 500px 100px;
+    grid-template-columns: auto 70%;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "menu-lateral principal"
+    "rodape rodape";
+}
+
+#cabecalho{
+    background-color: red;
+    grid-area: cabecalho;
+}
+
+#rodape{
+    background-color: purple;
+    grid-area: rodape;
+}
+
+#menu-lateral{
+    background-color: greenyellow;
+    grid-area: menu-lateral;    
+}
+
+#principal{
+    background-color: blue;
+    grid-area: principal;     
+}
