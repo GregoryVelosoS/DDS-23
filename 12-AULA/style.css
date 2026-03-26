@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0px;
+}
+
+/* Formatação base */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f6fb;
+  color: black;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+/* TOPO */
+.topo {
+  background-color: #0f172a;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 85px;
+}
+.logo {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bolder;
+  letter-spacing: 7px;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+}
+.menu a {
+  color: white;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.menu a:hover {
+  background: #1e293b;
+}
+
+/* SEÇÃO HERO - GRID */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 35px;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.hero-texto h1 {
+  font-size: 3em;
+  line-height: 1.2;
+  color: #1e293b;
+  margin: 20px 0;
+}
+
+.hero-texto p {
+  font-size: 1.2em;
+  color: #4b5563;
+  margin-bottom: 25px;
+}
+
+/* ETIQUETAS - INLINE */
+.etiqueta-linha {
+  display: inline;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 5px 10px;
+  border-radius: 10%;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.destaque-inline {
+  display: inline;
+  color: red;
+  font-weight: 700;
+}
+
+/* BOTÕES - INLINE-BLOCK */
+.botao {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10%;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.botao-primario {
+  background-color: red;
+  color: white;
+}
+
+.botao-secundario {
+  background-color: #e5e7eb;
+  color: black;
+}
+
+/* IMAGEM PRINCIPAL */
+.hero-imagem img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 15px 40px black;
+}
+
+/* FOOTER - GRID */
+.rodape {
+  margin-top: 50px;
+  background-color: #0f172a;
+  color: white;
+  padding: 45px 0;
+}
+
+.rodape-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.rodape-grid h3{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.rodape-grid p{
+    color: #d1d5db;
+    margin-bottom: 10px;
+}
+
+/* SEÇÕES */
+.secao{
+  padding: 30px 0 50px 0;
+}
+
+.titulo-secao{
+  margin-bottom: 25px;
+}
+
+.titulo-secao h2{
+  font-size: 2em;
+  color: #111827;
+  margin-bottom: 8px; 
+}
+
+.titulo-secao p{
+  color: #6b7280;
+}
+
+/* BLOCK */
+.bloco-historia{
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px lightgray;
+}
+
+.caixa-block{
+  display: block;
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  color: #7f1d1d;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* INLINE E INLINE-BLOCK */
+.linha-exemplo, .linha-cards-inlineblock{
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 30px black;
+}
+
+.linha-exemplo{
+  margin-bottom: 20px;
+}
+
+.texto-exemplo{
+  font-size: 1em;
+}
+
+.item-inline{
+  display: inline;
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-left: 8px;
+  font-weight: 700;
+}
+/* cards azuis */
+.card-inlineblock{
+  display: inline-block;
+  width: 28%;
+  min-height: 190px;
+  margin-right: 2%;
+  background-color: #eff6ff;
+  color:#1e3a8a;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.card-inlineblock h3{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-inlineblock p{
+  font-size: 0.7em;
+  line-height: 1.5;
+}
+
+/* DISPLAY FLEX */
+.lista-carreira{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-carreira{
+  flex: 1 1 260px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px lightgray;
+}
+
+.card-carreira img{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-carreira h3{
+  padding: 20px 20px 10px;
+  font-size: 1.3em;
+  color: #111827;
+}
+.card-carreira p{
+  padding: 0px 20px 10px;
+  color: #6b7280;
+}
+
+/* DISPLAY GRID */
+.painel-titulos{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.item-titulo{
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px lightgray;
+}
+
+.item-titulo h3{
+  font-size: 3em;
+  color: #b91c1c;
+  margin-bottom: 10px;
+}
+.item-titulo p{
+  color: #4b5536;
+  font-weight: 700;
+}
+
+
+/* SE A TELA FOR TABLET */
+@media screen and (max-width:1000px) {
+  .hero{
+    grid-template-columns: 1fr;
+  }
+  .painel-titulos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-inlineblock{
+    width: 48%;
+    margin-right: 2%;
+    margin-bottom: 10px;
+  }
+}
+
+/* SE A TELA FOR CELULAR */
+@media screen and (max-width:600px) {
+  /* Altera a navbar */
+  .navegacao{
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 0;
+  }
+  .menu{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Altera elementos no site */
+  .painel-titulos, .rodape-grid{
+    grid-template-columns: 1fr;
+  }
+  /* Altera cards azuis */
+  .card-inlineblock{
+    display: block;
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  /* Altera o rodape */
+  .rodape-grid{
+    text-align: center;
+    justify-items: center;
+  }
+}
