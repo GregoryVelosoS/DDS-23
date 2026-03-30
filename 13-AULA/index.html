@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- IMPORTAÇÃO DO BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- IMPORTAÇÃO DO MEU CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- Container no corpo do site inteiro -->
+  <body class="container bg-body-tertiary">
+    <header>
+      <!-- BARRA DE NAVEGAÇÃO DO BOOTSTRAP  -->
+      <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">C&G SOLUTIONS</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Unidades
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Vitória</a></li>
+                  <li><a class="dropdown-item" href="#">Vila Velha</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cariacica</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Serra</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>BEM VINDO AO BOOTSTRAP</h1>
+
+      <!-- Criando div com classes do bootstrap -->
+      <!-- row - diz que a div é linha -->
+      <!-- g - gap entre os elementos -->
+      <div class="row g-3">
+        <!-- col - diz que a div é coluna -->
+        <!-- bg - controla o fundo da div -->
+        <!-- p - padding -->
+        <!-- text - cor do texto -->
+        <!-- md - breakpoint de tamanho médio >=700px -->
+        <!-- xl - breakpoint de tamanho grande >=1200px -->
+        <div class="col col-12 col-md-6 col-xl-3 bg-success p-5 text-white">
+          Coluna A
+        </div>
+        <div class="col col-12 col-md-6 col-xl-3 bg-danger px-5 text-dark">
+          Coluna 2
+        </div>
+        <div class="col col-12 col-md-6 col-xl-3 bg-info py-4 text-danger">
+          Coluna ômega
+        </div>
+        <div class="col col-12 col-md-6 col-xl-3 bg-warning pb-3 text-success">
+          Coluna Fim
+        </div>
+      </div>
+
+      <!-- Display flex com bootstrap -->
+      <h2 class="my-3">Display flex</h2>
+      <div
+        class="d-flex flex-wrap flex-md-nowrap gap-2 justify-content-between align-items-center p-3"
+      >
+        <!-- Fiz uma, clonei 5x, total = 6 -->
+        <div class="p-2 bg-danger text-white rounded-3 fs-1">OPCÃO</div>
+        <div class="p-2 bg-warning text-white rounded-3 fs-1">OPCÃO</div>
+        <div class="p-2 bg-success text-white rounded-3 fs-1">OPCÃO</div>
+        <div class="p-2 bg-danger text-white rounded-3 fs-1">OPCÃO</div>
+        <div class="p-2 bg-warning text-white rounded-3 fs-1">OPCÃO</div>
+        <div class="p-2 bg-success text-white rounded-3 fs-1">OPCÃO</div>
+      </div>
+
+      <!-- Display grid com bootstrap -->
+      <h2 class="my-3">Display grid</h2>
+      <div class="d-grid gap-5">
+        <div class="p-2 bg-danger text-white rounded-3 fs-1">OPCÃO</div>
+        <div class="p-2 bg-warning text-white rounded-3 fs-1">OPCÃO</div>
+        <div class="p-2 bg-success text-white rounded-3 fs-1">OPCÃO</div>
+      </div>
+
+      <!-- GRUPO DE CARDS TOP -->
+      <div class="card-group m-3">
+        <div class="card">
+          <img
+            src="https://assets.goal.com/images/v3/blt2aaca933046f8b00/Cristiano%20Ronaldo%20Portugal%202024%20(4).jpg?auto=webp&format=pjpg&width=3840&quality=60"
+            class="card-img-top"
+            alt="..."
+            height="250"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Cristiano Ronaldo - CR7</h5>
+            <p class="card-text">
+              Um homem, uma máquina, uma besta enjaulada com ódio. Ele vence y
+              vence. 🤖
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Atualizado a 7 min atrás</small>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.ctfassets.net/3mv54pzvptwz/55YLwKPDnRXkqMBITRpWbC/0c2aefc04afa455c20e9ca0d209698e0/53174188191_42d4c831ae_o.jpg"
+            class="card-img-top"
+            alt="..."
+            height="250"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Neymar Jr</h5>
+            <p class="card-text">Filho de Deus, Pai, Feliz e Ousado ⚽</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Atualizado a 10 min atrás</small>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://assets.goal.com/images/v3/blta133e9292f5e1fd5/53668826602_09588c21f2_o.jpg?auto=webp&format=pjpg&width=3840&quality=60"
+            class="card-img-top"
+            alt="..."
+            height="250"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Calleri</h5>
+            <p class="card-text">
+              Toca no Calleri... Fez o gol que mais comemorei na história
+              recente do São Paulo.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Atualizado a 2 min atrás</small>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- IMPORTAÇÃO DO JAVASCRIPT DO BOOTSTRAP-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
