@@ -80,13 +80,13 @@ body{
 /* ABSOLUTA COM O PAI NÃO ESTÁTICO*/
 #pai-absoluto-relativo{
     background-color: red;
-    position: relative;
+    position: static;
     top:50px
 }
 
 #filho-absoluto-relativo{
-    background-color: yellow;
+    background-color: orange;
     position: absolute;
-    top:100px;
+    top:200px;
 }
 

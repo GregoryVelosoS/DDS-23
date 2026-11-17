@@ -126,12 +126,16 @@ var cx3 = Number(prompt("Caixa 3: "))
 
 // var cx1 = 30, cx2 = 30, cx3 = 55
 
-if((cx1 < cx2 && cx2 < cx3) || ((cx1 + cx2) <= cx3)){
-    console.log("1 viagem necessária");
+var cx1 = Number(prompt("Caixa 1: "));
+var cx2 = Number(prompt("Caixa 2: "));
+var cx3 = Number(prompt("Caixa 3: "));
+
+if ((cx1 < cx2 && cx2 < cx3) || (cx1 + cx2 < cx3)) {
+    console.log("1 Viagem");
 }
-else if((cx1 < cx2 && cx2 == cx3) || (cx1 == cx2 && cx2 < cx3)){
-    console.log("2 viagens necessárias");
+else if ((cx1 < cx2 && cx2 == cx3) || (cx1 == cx2 && cx2 < cx3)) {
+    console.log("2 Viagens");
 }
-else{
-    console.log("3 viagens necessárias");
+else {
+    console.log("3 Viagens");
 }

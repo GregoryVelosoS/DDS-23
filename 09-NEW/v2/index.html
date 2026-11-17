@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Laboratório CSS - Display</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <span class="tag"> LABORATÓRIO CSS </span>
+
+        <h1>Display na prática</h1>
+
+        <p>
+          Observe como os mesmos elementos se comportam quando alteramos a
+          propriedade display.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- INTRODUÇÃO -->
+
+      <section class="intro">
+        <div class="icon">
+          <i class="fa-solid fa-flask"></i>
+        </div>
+
+        <div>
+          <h2>Antes de começar</h2>
+
+          <p>
+            A propriedade <code>display</code> determina como um elemento
+            participa do layout da página.
+          </p>
+
+          <p>
+            Nesta atividade vamos utilizar os mesmos elementos em diferentes
+            situações para observar as mudanças no comportamento do layout.
+          </p>
+        </div>
+      </section>
+
+      <!-- BLOCK -->
+
+      <section class="experimento">
+        <div class="titulo">
+          <span class="numero"> 01 </span>
+
+          <div>
+            <h2>display: block</h2>
+
+            <p>Os elementos ocupam uma nova linha.</p>
+          </div>
+        </div>
+
+        <div class="codigo">
+          <code> display: block; </code>
+        </div>
+
+        <div class="area-exemplo">
+          <div class="block-box">HTML</div>
+
+          <div class="block-box">CSS</div>
+
+          <div class="block-box">JAVASCRIPT</div>
+        </div>
+
+        <div class="observacao">
+          <strong> Observe: </strong>
+
+          <span> Cada elemento começa em uma nova linha. </span>
+        </div>
+      </section>
+
+      <!-- INLINE -->
+
+      <section class="experimento">
+        <div class="titulo">
+          <span class="numero"> 02 </span>
+
+          <div>
+            <h2>display: inline</h2>
+
+            <p>Os elementos permanecem no fluxo da mesma linha.</p>
+          </div>
+        </div>
+
+        <div class="codigo">
+          <code> display: inline; </code>
+        </div>
+
+        <div class="area-exemplo">
+          <span class="inline-box"> HTML </span>
+
+          <span class="inline-box"> CSS </span>
+
+          <span class="inline-box"> JAVASCRIPT </span>
+        </div>
+
+        <div class="observacao">
+          <strong> Observe: </strong>
+
+          <span>
+            Os elementos ficam lado a lado e continuam participando do fluxo de
+            texto.
+          </span>
+        </div>
+      </section>
+
+      <!-- INLINE BLOCK -->
+
+      <section class="experimento">
+        <div class="titulo">
+          <span class="numero"> 03 </span>
+
+          <div>
+            <h2>display: inline-block</h2>
+
+            <p>Os elementos ficam na mesma linha, mas aceitam dimensões.</p>
+          </div>
+        </div>
+
+        <div class="codigo">
+          <code> display: inline-block; </code>
+        </div>
+
+        <div class="area-exemplo">
+          <div class="inline-block-box">HTML</div>
+
+          <div class="inline-block-box">CSS</div>
+
+          <div class="inline-block-box">JAVASCRIPT</div>
+        </div>
+
+        <div class="observacao">
+          <strong> Observe: </strong>
+
+          <span>
+            Os elementos ficam lado a lado, mas podemos controlar largura e
+            altura.
+          </span>
+        </div>
+      </section>
+
+      <!-- FLEX -->
+
+      <section class="experimento">
+        <div class="titulo">
+          <span class="numero"> 04 </span>
+
+          <div>
+            <h2>display: flex</h2>
+
+            <p>O elemento pai se torna um flex container.</p>
+          </div>
+        </div>
+
+        <div class="codigo">
+          <code> display: flex; </code>
+        </div>
+
+        <div class="area-exemplo flex-container">
+          <div class="flex-box">HTML</div>
+
+          <div class="flex-box">CSS</div>
+
+          <div class="flex-box">JAVASCRIPT</div>
+        </div>
+
+        <div class="observacao">
+          <strong> Observe: </strong>
+
+          <span>
+            Agora conseguimos controlar o posicionamento dos elementos filhos
+            usando propriedades do Flexbox.
+          </span>
+        </div>
+
+        <div class="propriedades">
+          <div>
+            <code>flex-direction</code>
+            <span>Define a direção dos elementos.</span>
+          </div>
+
+          <div>
+            <code>justify-content</code>
+            <span>Controla o alinhamento no eixo principal.</span>
+          </div>
+
+          <div>
+            <code>align-items</code>
+            <span>Controla o alinhamento no eixo transversal.</span>
+          </div>
+
+          <div>
+            <code>gap</code>
+            <span>Define o espaço entre os elementos.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLEX DIREÇÃO -->
+
+      <section class="experimento">
+        <div class="titulo">
+          <span class="numero"> 05 </span>
+
+          <div>
+            <h2>Flexbox: mudando a direção</h2>
+
+            <p>O mesmo conteúdo pode ser organizado em diferentes direções.</p>
+          </div>
+        </div>
+
+        <div class="comparacao">
+          <div>
+            <h3>row</h3>
+
+            <div class="mini-flex row">
+              <span>A</span>
+              <span>B</span>
+              <span>C</span>
+            </div>
+          </div>
+
+          <div>
+            <h3>column</h3>
+
+            <div class="mini-flex column">
+              <span>A</span>
+              <span>B</span>
+              <span>C</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- JUSTIFY -->
+
+      <section class="experimento">
+        <div class="titulo">
+          <span class="numero"> 06 </span>
+
+          <div>
+            <h2>Flexbox: distribuição</h2>
+
+            <p>O espaço disponível pode ser distribuído entre os elementos.</p>
+          </div>
+        </div>
+
+        <div class="comparacao">
+          <div>
+            <h3>justify-content: flex-start</h3>
+
+            <div class="mini-flex justify-start">
+              <span>A</span>
+              <span>B</span>
+              <span>C</span>
+            </div>
+          </div>
+
+          <div>
+            <h3>justify-content: center</h3>
+
+            <div class="mini-flex justify-center">
+              <span>A</span>
+              <span>B</span>
+              <span>C</span>
+            </div>
+          </div>
+
+          <div>
+            <h3>justify-content: space-between</h3>
+
+            <div class="mini-flex justify-between">
+              <span>A</span>
+              <span>B</span>
+              <span>C</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID -->
+
+      <section class="experimento">
+        <div class="titulo">
+          <span class="numero"> 07 </span>
+
+          <div>
+            <h2>display: grid</h2>
+
+            <p>
+              O Grid organiza os elementos trabalhando com linhas e colunas.
+            </p>
+          </div>
+        </div>
+
+        <div class="codigo">
+          <code>
+            display: grid;
+            <br />
+            grid-template-columns: repeat(3, 1fr);
+          </code>
+        </div>
+
+        <div class="area-exemplo grid-container">
+          <div>01</div>
+
+          <div>02</div>
+
+          <div>03</div>
+
+          <div>04</div>
+
+          <div>05</div>
+
+          <div>06</div>
+        </div>
+
+        <div class="observacao">
+          <strong> Observe: </strong>
+
+          <span>
+            O Grid permite trabalhar simultaneamente com linhas e colunas.
+          </span>
+        </div>
+      </section>
+
+      <!-- COMPARAÇÃO -->
+
+      <section class="comparacao-final">
+        <div class="titulo">
+          <span class="numero"> 08 </span>
+
+          <div>
+            <h2>Qual display escolher?</h2>
+
+            <p>
+              Não existe um único display correto. A escolha depende do
+              comportamento desejado para o elemento.
+            </p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <article>
+            <code>block</code>
+
+            <h3>Um elemento abaixo do outro</h3>
+
+            <p>Útil para estruturas que ocupam uma nova linha.</p>
+          </article>
+
+          <article>
+            <code>inline</code>
+
+            <h3>Elementos no fluxo do texto</h3>
+
+            <p>Útil para pequenos conteúdos que permanecem na mesma linha.</p>
+          </article>
+
+          <article>
+            <code>inline-block</code>
+
+            <h3>Lado a lado com dimensões</h3>
+
+            <p>Permite combinar características de inline e block.</p>
+          </article>
+
+          <article>
+            <code>flex</code>
+
+            <h3>Organização em uma dimensão</h3>
+
+            <p>Excelente para organizar elementos em linha ou coluna.</p>
+          </article>
+
+          <article>
+            <code>grid</code>
+
+            <h3>Organização em duas dimensões</h3>
+
+            <p>Indicado para estruturas baseadas em linhas e colunas.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- DESAFIO -->
+
+      <section class="desafio">
+        <div class="desafio-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+
+        <div>
+          <span class="tag"> AGORA É COM VOCÊ </span>
+
+          <h2>Experimente modificar o código</h2>
+
+          <p>
+            Escolha um dos exemplos acima e altere suas propriedades CSS.
+            Observe o resultado e tente explicar por que o layout mudou.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Laboratório CSS — Display e Layout</p>
+    </footer>
+  </body>
+</html>

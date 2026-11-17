@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display — Guia Visual</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <span class="rotulo">CSS FUNDAMENTOS</span>
+            <h1>Display no CSS</h1>
+            <p>Entenda como os elementos ocupam espaço, se posicionam e se organizam na página.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="introducao">
+            <div>
+                <span class="icone"><i class="fa-solid fa-layer-group"></i></span>
+                <h2>O que é <code>display</code>?</h2>
+                <p>
+                    A propriedade <code>display</code> define como um elemento participa
+                    do layout da página. Dependendo do valor utilizado, o elemento pode
+                    ocupar uma linha inteira, permanecer na mesma linha de outros elementos
+                    ou organizar seus elementos filhos de diferentes maneiras.
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="titulo-secao">
+                <span>01</span>
+                <div>
+                    <h2>Os principais tipos</h2>
+                    <p>Veja o comportamento de cada valor e quando ele pode ser utilizado.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="card-topo">
+                        <span class="numero">01</span>
+                        <code>display: block</code>
+                    </div>
+                    <h3>Block</h3>
+                    <p>
+                        O elemento normalmente começa em uma nova linha e ocupa a largura
+                        disponível do seu contexto.
+                    </p>
+
+                    <div class="exemplo block-demo">
+                        <div>Elemento A</div>
+                        <div>Elemento B</div>
+                        <div>Elemento C</div>
+                    </div>
+
+                    <div class="uso">
+                        <strong>Quando usar?</strong>
+                        <p>Seções, títulos, parágrafos, containers e outros elementos que devem ficar em linhas separadas.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-topo">
+                        <span class="numero">02</span>
+                        <code>display: inline</code>
+                    </div>
+                    <h3>Inline</h3>
+                    <p>
+                        O elemento permanece no fluxo da mesma linha, junto de outros
+                        elementos inline.
+                    </p>
+
+                    <div class="exemplo inline-demo">
+                        <span>Elemento A</span>
+                        <span>Elemento B</span>
+                        <span>Elemento C</span>
+                    </div>
+
+                    <div class="uso">
+                        <strong>Quando usar?</strong>
+                        <p>Trechos de texto, links e pequenos elementos que precisam permanecer dentro da mesma linha.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-topo">
+                        <span class="numero">03</span>
+                        <code>display: inline-block</code>
+                    </div>
+                    <h3>Inline-block</h3>
+                    <p>
+                        Combina características de inline e block: os elementos ficam
+                        na mesma linha, mas permitem definir dimensões.
+                    </p>
+
+                    <div class="exemplo inline-block-demo">
+                        <div>Elemento A</div>
+                        <div>Elemento B</div>
+                        <div>Elemento C</div>
+                    </div>
+
+                    <div class="uso">
+                        <strong>Quando usar?</strong>
+                        <p>Pequenos blocos lado a lado que precisam ter largura e altura definidas.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-topo">
+                        <span class="numero">04</span>
+                        <code>display: flex</code>
+                    </div>
+                    <h3>Flex</h3>
+                    <p>
+                        Transforma o elemento em um flex container e permite organizar
+                        seus filhos de maneira prática em uma dimensão.
+                    </p>
+
+                    <div class="exemplo flex-demo">
+                        <div>Elemento A</div>
+                        <div>Elemento B</div>
+                        <div>Elemento C</div>
+                    </div>
+
+                    <div class="uso">
+                        <strong>Quando usar?</strong>
+                        <p>Menus, alinhamentos, barras de navegação, cards e componentes organizados em linha ou coluna.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-topo">
+                        <span class="numero">05</span>
+                        <code>display: grid</code>
+                    </div>
+                    <h3>Grid</h3>
+                    <p>
+                        Cria uma estrutura baseada em linhas e colunas, facilitando
+                        layouts bidimensionais.
+                    </p>
+
+                    <div class="exemplo grid-demo">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+
+                    <div class="uso">
+                        <strong>Quando usar?</strong>
+                        <p>Galerias, dashboards, páginas e estruturas que precisam trabalhar simultaneamente com linhas e colunas.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-topo">
+                        <span class="numero">06</span>
+                        <code>display: none</code>
+                    </div>
+                    <h3>None</h3>
+                    <p>
+                        O elemento deixa de participar do layout. Ele não ocupa espaço
+                        na página enquanto estiver com esse valor.
+                    </p>
+
+                    <div class="exemplo none-demo">
+                        <div>Visível</div>
+                        <div class="oculto">Oculto</div>
+                        <div>Visível</div>
+                    </div>
+
+                    <div class="uso">
+                        <strong>Quando usar?</strong>
+                        <p>Elementos que precisam ser retirados do layout, como partes de uma interface que não devem aparecer naquele momento.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="titulo-secao">
+                <span>02</span>
+                <div>
+                    <h2>Flexbox em ação</h2>
+                    <p>Com <code>display: flex</code>, outras propriedades controlam o posicionamento dos filhos.</p>
+                </div>
+            </div>
+
+            <div class="flex-explicacao">
+                <div class="flex-painel">
+                    <div class="flex-linha">
+                        <span><code>display</code></span>
+                        <strong>flex</strong>
+                    </div>
+                    <div class="flex-linha">
+                        <span><code>flex-direction</code></span>
+                        <strong>row</strong>
+                    </div>
+                    <div class="flex-linha">
+                        <span><code>justify-content</code></span>
+                        <strong>space-between</strong>
+                    </div>
+                    <div class="flex-linha">
+                        <span><code>align-items</code></span>
+                        <strong>center</strong>
+                    </div>
+                </div>
+
+                <div class="flex-visual">
+                    <div class="item-flex">A</div>
+                    <div class="item-flex">B</div>
+                    <div class="item-flex">C</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="titulo-secao">
+                <span>03</span>
+                <div>
+                    <h2>Comparando os comportamentos</h2>
+                    <p>Uma visão rápida para escolher o display adequado.</p>
+                </div>
+            </div>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Display</th>
+                            <th>Nova linha?</th>
+                            <th>Dimensões</th>
+                            <th>Principal característica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>block</code></td>
+                            <td>Sim</td>
+                            <td>Permite largura e altura</td>
+                            <td>Ocupa uma linha no fluxo</td>
+                        </tr>
+                        <tr>
+                            <td><code>inline</code></td>
+                            <td>Não</td>
+                            <td>Comportamento diferente de block</td>
+                            <td>Permanece no fluxo da linha</td>
+                        </tr>
+                        <tr>
+                            <td><code>inline-block</code></td>
+                            <td>Não</td>
+                            <td>Permite largura e altura</td>
+                            <td>Fica em linha com dimensões</td>
+                        </tr>
+                        <tr>
+                            <td><code>flex</code></td>
+                            <td>Depende do layout</td>
+                            <td>Controlado pelo flex container</td>
+                            <td>Organização em uma dimensão</td>
+                        </tr>
+                        <tr>
+                            <td><code>grid</code></td>
+                            <td>Depende do layout</td>
+                            <td>Controlado pela grade</td>
+                            <td>Linhas e colunas</td>
+                        </tr>
+                        <tr>
+                            <td><code>none</code></td>
+                            <td>Não se aplica</td>
+                            <td>Não ocupa espaço</td>
+                            <td>Remove o elemento do layout</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="desafio">
+            <span class="icone"><i class="fa-solid fa-code"></i></span>
+            <div>
+                <span class="rotulo">DESAFIO PRÁTICO</span>
+                <h2>Crie seu próprio Display Lab</h2>
+                <p>
+                    Reproduza esta página e crie uma área de testes onde o usuário possa
+                    visualizar diferentes comportamentos de <code>display</code>.
+                    Faça a primeira versão somente com HTML e CSS.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CSS Fundamentals · Display e Layout</p>
+    </footer>
+
+</body>
+</html>

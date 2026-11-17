@@ -1,0 +1,638 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fundo: #f3f5f7;
+  --superficie: #ffffff;
+
+  --texto: #17202a;
+  --texto-secundario: #66727e;
+
+  --borda: #dce2e7;
+
+  --escuro: #17202a;
+  --cinza: #eef1f4;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+
+  background: var(--fundo);
+
+  color: var(--texto);
+
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1800px, 92%);
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  background: var(--escuro);
+
+  color: white;
+
+  padding: 70px 0;
+}
+
+.tag {
+  display: inline-block;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.header h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+
+  line-height: 1;
+
+  margin: 12px 0;
+}
+
+.header p {
+  max-width: 680px;
+
+  color: #d5dce2;
+
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   INTRODUÇÃO
+========================================= */
+
+.intro {
+  display: flex;
+
+  gap: 22px;
+
+  align-items: flex-start;
+
+  background: var(--superficie);
+
+  border: 1px solid var(--borda);
+
+  border-radius: 16px;
+
+  padding: 30px;
+
+  margin: 40px 0;
+}
+
+.icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 48px;
+
+  height: 48px;
+
+  flex-shrink: 0;
+
+  background: var(--cinza);
+
+  border-radius: 10px;
+}
+
+.intro h2 {
+  margin-bottom: 8px;
+}
+
+.intro p {
+  color: var(--texto-secundario);
+
+  margin-bottom: 8px;
+}
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+
+  background: #edf0f2;
+
+  padding: 3px 7px;
+
+  border-radius: 5px;
+
+  font-size: 0.9em;
+}
+
+/* =========================================
+   EXPERIMENTOS
+========================================= */
+
+.experimento {
+  background: var(--superficie);
+
+  border: 1px solid var(--borda);
+
+  border-radius: 16px;
+
+  padding: 30px;
+
+  margin-bottom: 28px;
+}
+
+.titulo {
+  display: flex;
+
+  gap: 18px;
+
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+}
+
+.numero {
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  color: var(--texto-secundario);
+}
+
+.titulo h2 {
+  font-size: 1.6rem;
+
+  line-height: 1.2;
+}
+
+.titulo p {
+  color: var(--texto-secundario);
+
+  margin-top: 5px;
+}
+
+/* =========================================
+   CÓDIGO
+========================================= */
+
+.codigo {
+  background: #202832;
+
+  color: white;
+
+  border-radius: 9px;
+
+  padding: 14px 18px;
+
+  margin-bottom: 20px;
+}
+
+.codigo code {
+  background: transparent;
+
+  padding: 0;
+
+  color: white;
+}
+
+/* =========================================
+   ÁREA DOS EXEMPLOS
+========================================= */
+
+.area-exemplo {
+  min-height: 170px;
+
+  background: #f7f8f9;
+
+  border: 1px dashed #adb7c0;
+
+  border-radius: 10px;
+
+  padding: 20px;
+}
+
+/* =========================================
+   BLOCK
+========================================= */
+
+.block-box {
+  display: block;
+
+  background: var(--escuro);
+
+  color: white;
+
+  padding: 12px;
+
+  margin-bottom: 8px;
+
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+/* =========================================
+   INLINE
+========================================= */
+
+.inline-box {
+  display: inline;
+
+  background: var(--escuro);
+
+  color: white;
+
+  padding: 8px 12px;
+
+  margin-right: 5px;
+
+  border-radius: 5px;
+}
+
+/* =========================================
+   INLINE BLOCK
+========================================= */
+
+.inline-block-box {
+  display: inline-block;
+
+  width: 30%;
+
+  height: 90px;
+
+  background: var(--escuro);
+
+  color: white;
+
+  padding: 30px 10px;
+
+  margin-right: 1%;
+
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+/* =========================================
+   FLEX
+========================================= */
+
+.flex-container {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+.flex-box {
+  flex: 1;
+
+  background: var(--escuro);
+
+  color: white;
+
+  padding: 25px;
+
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+/* =========================================
+   OBSERVAÇÃO
+========================================= */
+
+.observacao {
+  display: flex;
+
+  gap: 8px;
+
+  margin-top: 18px;
+
+  padding: 12px 15px;
+
+  background: var(--cinza);
+
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+}
+
+.observacao span {
+  color: var(--texto-secundario);
+}
+
+/* =========================================
+   PROPRIEDADES FLEX
+========================================= */
+
+.propriedades {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.propriedades div {
+  border: 1px solid var(--borda);
+
+  padding: 15px;
+
+  border-radius: 8px;
+}
+
+.propriedades code {
+  display: block;
+
+  margin-bottom: 5px;
+}
+
+.propriedades span {
+  color: var(--texto-secundario);
+
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   MINI FLEX
+========================================= */
+
+.comparacao {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.comparacao > div {
+  border: 1px solid var(--borda);
+
+  border-radius: 10px;
+
+  padding: 18px;
+}
+
+.comparacao h3 {
+  font-size: 0.9rem;
+
+  margin-bottom: 12px;
+}
+
+.mini-flex {
+  display: flex;
+
+  gap: 8px;
+
+  min-height: 140px;
+
+  padding: 15px;
+
+  background: #f7f8f9;
+
+  border: 1px dashed #adb7c0;
+
+  border-radius: 8px;
+}
+
+.mini-flex span {
+  width: 50px;
+
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--escuro);
+
+  color: white;
+
+  border-radius: 5px;
+
+  font-weight: 700;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* =========================================
+   JUSTIFY CONTENT
+========================================= */
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.grid-container div {
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--escuro);
+
+  color: white;
+
+  border-radius: 6px;
+
+  font-weight: 700;
+}
+
+/* =========================================
+   COMPARAÇÃO FINAL
+========================================= */
+
+.comparacao-final {
+  margin: 60px 0;
+}
+
+.cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.cards article {
+  background: var(--superficie);
+
+  border: 1px solid var(--borda);
+
+  border-radius: 12px;
+
+  padding: 22px;
+}
+
+.cards article code {
+  display: inline-block;
+
+  margin-bottom: 12px;
+}
+
+.cards h3 {
+  font-size: 1rem;
+
+  margin-bottom: 7px;
+}
+
+.cards p {
+  color: var(--texto-secundario);
+
+  font-size: 0.88rem;
+}
+
+/* =========================================
+   DESAFIO
+========================================= */
+
+.desafio {
+  display: flex;
+
+  gap: 20px;
+
+  align-items: flex-start;
+
+  background: var(--escuro);
+
+  color: white;
+
+  padding: 32px;
+
+  border-radius: 16px;
+
+  margin-bottom: 70px;
+}
+
+.desafio-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 48px;
+
+  height: 48px;
+
+  flex-shrink: 0;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 10px;
+}
+
+.desafio h2 {
+  margin: 8px 0;
+}
+
+.desafio p {
+  color: #d5dce2;
+
+  max-width: 750px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  border-top: 1px solid var(--borda);
+
+  padding: 25px;
+
+  text-align: center;
+
+  color: var(--texto-secundario);
+
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .propriedades {
+    grid-template-columns: 1fr;
+  }
+
+  .comparacao {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    flex-direction: column;
+  }
+
+  .inline-block-box {
+    width: 100%;
+
+    margin-bottom: 8px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-box {
+    width: 100%;
+  }
+
+  .desafio {
+    flex-direction: column;
+  }
+}

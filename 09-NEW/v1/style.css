@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fundo: #f4f6f8;
+    --superficie: #ffffff;
+    --texto: #17202a;
+    --texto-secundario: #65717d;
+    --borda: #dce2e7;
+    --destaque: #1f2937;
+    --destaque-claro: #eef1f4;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.cabecalho {
+    background: #17202a;
+    color: white;
+    padding: 72px 0 64px;
+}
+
+.rotulo {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.cabecalho h1 {
+    margin: 12px 0 10px;
+    font-size: clamp(2.5rem, 6vw, 4.8rem);
+    line-height: 1;
+}
+
+.cabecalho p {
+    max-width: 680px;
+    color: #d8dee4;
+    font-size: 1.1rem;
+}
+
+.introducao {
+    margin: 40px 0;
+    padding: 34px;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+}
+
+.icone {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    background: var(--destaque-claro);
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.introducao h2,
+.secao h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.introducao p {
+    max-width: 850px;
+    margin-top: 12px;
+    color: var(--texto-secundario);
+}
+
+code {
+    font-family: Consolas, "Courier New", monospace;
+    background: #edf0f2;
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-size: 0.92em;
+}
+
+.cabecalho code,
+.desafio code {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.secao {
+    margin: 64px 0;
+}
+
+.titulo-secao {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 26px;
+}
+
+.titulo-secao > span {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding-top: 5px;
+}
+
+.titulo-secao p {
+    margin-top: 6px;
+    color: var(--texto-secundario);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.numero {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--texto-secundario);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+}
+
+.card > p {
+    color: var(--texto-secundario);
+    margin: 8px 0 20px;
+}
+
+.exemplo {
+    min-height: 115px;
+    padding: 14px;
+    border: 1px dashed #aeb7bf;
+    background: #f7f8f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.exemplo div,
+.exemplo span {
+    background: #2d3742;
+    color: white;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 0.82rem;
+}
+
+.block-demo div {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inline-demo span {
+    display: inline;
+    margin-right: 5px;
+}
+
+.inline-block-demo {
+    white-space: nowrap;
+}
+
+.inline-block-demo div {
+    display: inline-block;
+    width: 31%;
+    text-align: center;
+    margin-right: 1%;
+}
+
+.flex-demo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.flex-demo div {
+    flex: 1;
+    text-align: center;
+}
+
+.grid-demo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.grid-demo div {
+    text-align: center;
+}
+
+.none-demo {
+    display: flex;
+    gap: 8px;
+}
+
+.none-demo div {
+    flex: 1;
+    text-align: center;
+}
+
+.none-demo .oculto {
+    display: none;
+}
+
+.uso {
+    border-top: 1px solid var(--borda);
+    padding-top: 16px;
+}
+
+.uso strong {
+    font-size: 0.85rem;
+}
+
+.uso p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin-top: 3px;
+}
+
+.flex-explicacao {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 20px;
+}
+
+.flex-painel,
+.flex-visual {
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 22px;
+}
+
+.flex-linha {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.flex-linha:last-child {
+    border-bottom: 0;
+}
+
+.flex-visual {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.item-flex {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #2d3742;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.tabela-container {
+    overflow-x: auto;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+th,
+td {
+    padding: 15px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--borda);
+}
+
+th {
+    background: #eef1f4;
+    font-size: 0.85rem;
+}
+
+td {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+
+td:first-child {
+    color: var(--texto);
+    font-weight: 700;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+.desafio {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    margin: 72px 0;
+    padding: 34px;
+    background: #17202a;
+    color: white;
+    border-radius: 18px;
+}
+
+.desafio .icone {
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.desafio h2 {
+    margin: 7px 0;
+}
+
+.desafio p {
+    color: #d8dee4;
+    max-width: 780px;
+}
+
+footer {
+    border-top: 1px solid var(--borda);
+    padding: 28px 0;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+    .cards,
+    .flex-explicacao {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho {
+        padding: 54px 0;
+    }
+
+    .introducao,
+    .card,
+    .flex-painel,
+    .flex-visual,
+    .desafio {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 520px) {
+    .titulo-secao {
+        gap: 10px;
+    }
+
+    .inline-block-demo {
+        white-space: normal;
+    }
+
+    .inline-block-demo div {
+        width: 100%;
+        margin: 0 0 5px;
+    }
+
+    .desafio {
+        flex-direction: column;
+    }
+}

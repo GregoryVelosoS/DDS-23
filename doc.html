@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Futebol e Layout com Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<!-- Container no corpo do site inteiro -->
+  <body class="">
+    <header>
+      <!-- BARRA DE NAVEGAÇÃO DO BOOTSTRAP  -->
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid container">
+          <a class="navbar-brand" href="#">C&G SOLUTIONS</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Unidades
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Vitória</a></li>
+                  <li><a class="dropdown-item" href="#">Vila Velha</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cariacica</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Serra</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <main>
+
+        <!-- CONTAINER
+             Mantém o conteúdo centralizado e com espaçamento
+             adequado em diferentes tamanhos de tela. -->
+        <section class="container py-5">
+
+            <h1 class="display-5">
+                Futebol em Campo
+            </h1>
+
+            <p class="lead">
+                Um exemplo simples para estudar os sistemas
+                de layout Flexbox e Grid utilizando Bootstrap.
+            </p>
+
+        </section>
+
+
+        <!-- FLEXBOX
+             d-flex = display: flex
+             flex-wrap = permite quebra dos elementos
+             gap-3 = espaçamento entre os elementos
+             justify-content-between = distribuição horizontal -->
+        <section class="container mb-5">
+
+            <h2 class="mb-4">
+                Posições em campo
+            </h2>
+
+            <div class="d-flex flex-wrap justify-content-between gap-3">
+
+                <div class="card flex-fill">
+                    <div class="card-body">
+                        <h5 class="card-title">Goleiro</h5>
+                        <p class="card-text">
+                            Responsável pela defesa da baliza.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card flex-fill">
+                    <div class="card-body">
+                        <h5 class="card-title">Defensor</h5>
+                        <p class="card-text">
+                            Atua principalmente na defesa.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card flex-fill">
+                    <div class="card-body">
+                        <h5 class="card-title">Meio-campista</h5>
+                        <p class="card-text">
+                            Participa da construção das jogadas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card flex-fill">
+                    <div class="card-body">
+                        <h5 class="card-title">Atacante</h5>
+                        <p class="card-text">
+                            Atua principalmente nas ações ofensivas.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GRID DO BOOTSTRAP
+             row = cria uma linha
+             col-md-4 = cada elemento ocupa 4 das 12 colunas
+             Em telas menores, col-md-4 passa a ocupar a largura disponível. -->
+        <section class="container mb-5">
+
+            <h2 class="mb-4">
+                Competições
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="card h-100">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Campeonato Nacional
+                            </h5>
+
+                            <p class="card-text">
+                                Competição entre equipes de diferentes regiões.
+                            </p>
+
+                            <a href="#" class="btn btn-primary">
+                                Saiba mais
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="card h-100">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Copa Nacional
+                            </h5>
+
+                            <p class="card-text">
+                                Torneio disputado em diferentes fases.
+                            </p>
+
+                            <a href="#" class="btn btn-primary">
+                                Saiba mais
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="card h-100">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Campeonato Internacional
+                            </h5>
+
+                            <p class="card-text">
+                                Competição envolvendo equipes de diferentes países.
+                            </p>
+
+                            <a href="#" class="btn btn-primary">
+                                Saiba mais
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- D-GRID
+             d-grid = display: grid
+             gap-2 = espaçamento entre os elementos -->
+        <section class="container mb-5">
+
+            <h2 class="mb-4">
+                Ações rápidas
+            </h2>
+
+            <div class="d-grid gap-2">
+
+                <button class="btn btn-primary">
+                    Consultar times
+                </button>
+
+                <button class="btn btn-secondary">
+                    Consultar jogadores
+                </button>
+
+                <button class="btn btn-success">
+                    Ver competições
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER
+         Também utilizando o sistema de Grid do Bootstrap. -->
+    <footer class="bg-dark text-white py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <h5>Futebol</h5>
+
+                    <p>
+                        Conteúdo desenvolvido para estudar
+                        estruturas de layout com Bootstrap.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <h5>Links</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li>
+                            <a href="#" class="text-white">
+                                Início
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-white">
+                                Times
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-white">
+                                Competições
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <h5>Contato</h5>
+
+                    <p>
+                        contato@futebol.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript do Bootstrap
+         Necessário para componentes interativos como o menu mobile. -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

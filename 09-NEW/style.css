@@ -1,0 +1,406 @@
+/* =========================================
+   VARIÁVEIS
+========================================= */
+
+:root {
+  --font-main: "Segoe UI", sans-serif;
+  --color-primary: #ff0000;
+  --color-text: #222;
+  --color-bg-page: #f4f4f4;
+  --color-bg-box: #e5e7eb;
+  --color-white: white;
+  --color-gray: gray;
+
+  /* Estados e exemplos */
+  --blue-bg: #dbeafe;
+  --blue-border: #2563eb;
+  --green-bg: #dcfce7;
+  --green-border: #16a34a;
+  --yellow-bg: #fef3c7;
+  --yellow-border: #d97706;
+
+  /* Comparação & Observações */
+  --comparacao-block-bg: lightblue;
+  --comparacao-inline-bg: lightgreen;
+  --comparacao-inline-block-bg: #fde68a;
+  --observacao-bg: #f3f4f6;
+
+  /* Medidas */
+  --radius-default: 10px;
+  --gap-default: 10px;
+}
+
+
+/* =========================================
+   ESTILO GERAL
+========================================= */
+
+body {
+  font-family: var(--font-main);
+  margin: 20px;
+  background-color: var(--color-bg-page);
+  color: var(--color-text);
+}
+
+header {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: var(--radius-default);
+}
+
+h1,
+h2 {
+  color: var(--color-primary);
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  margin-top: 25px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* =========================================
+   BLOCO DAS ATIVIDADES
+========================================= */
+
+.bloco {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: var(--radius-default);
+}
+
+/* =========================================
+   COMPARAÇÃO
+========================================= */
+
+.comparacao {
+  border: 2px dashed var(--color-gray);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   OBSERVAÇÕES
+========================================= */
+
+.observacao {
+  background-color: var(--observacao-bg);
+  border-left: 5px solid var(--color-primary);
+  padding: 12px;
+}
+
+/* =========================================
+   DISPLAY: BLOCK
+========================================= */
+
+.exemplo-block div {
+  display: block;
+  background-color: var(--blue-bg);
+  border: 2px solid var(--blue-border);
+  padding: 15px;
+  margin-bottom: 8px;
+}
+/* =========================================
+   COMPARAÇÃO BLOCK
+========================================= */
+/* BLOCK */
+
+.comparacao.block div {
+  display: block;
+  background-color: var(--comparacao-block-bg);
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+
+/* =========================================
+   DISPLAY: INLINE
+========================================= */
+
+.exemplo-inline span {
+  display: inline;
+  background-color: var(--green-bg);
+  border: 2px solid var(--green-border);
+  padding: 10px;
+}
+
+/* =========================================
+   COMPARAÇÃO INLINE
+========================================= */
+/* INLINE */
+
+.comparacao.inline span {
+  display: inline;
+  background-color: var(--comparacao-inline-bg);
+  padding: 10px;
+}
+
+/* =========================================
+   DISPLAY: INLINE-BLOCK
+========================================= */
+
+.exemplo-inline-block div {
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  background-color: var(--yellow-bg);
+  border: 2px solid var(--yellow-border);
+  padding: 25px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* =========================================
+   COMPARAÇÃO INLINE BLOCK
+========================================= */
+/* INLINE-BLOCK */
+
+.comparacao.inline-block div {
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+  background-color: var(--comparacao-inline-block-bg);
+  padding: 20px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+/* =========================================
+   DISPLAY: FLEX
+========================================= */
+
+.exemplo-flex {
+  display: flex;
+  background-color: var(--color-bg-box);
+  padding: 20px;
+  gap: var(--gap-default);
+}
+
+.exemplo-flex div {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 25px;
+  flex: 1;
+  text-align: center;
+}
+
+/* =========================================
+   FLEX-DIRECTION
+========================================= */
+
+.flex-direction-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-default);
+  background-color: var(--color-bg-box);
+  padding: 15px;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-default);
+  background-color: var(--color-bg-box);
+  padding: 15px;
+}
+
+.flex-direction-row div,
+.flex-direction-column div {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 15px;
+  text-align: center;
+}
+
+/* =========================================
+   JUSTIFY-CONTENT
+========================================= */
+
+.justify-start,
+.justify-center,
+.justify-between {
+  display: flex;
+  background-color: var(--color-bg-box);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-start div,
+.justify-center div,
+.justify-between div {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 15px 25px;
+}
+
+/* =========================================
+   ALIGN-ITEMS
+========================================= */
+
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 180px;
+  background-color: var(--color-bg-box);
+}
+
+.align-center div {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 15px;
+}
+
+.align-center .grande {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================
+   GAP
+========================================= */
+
+.gap-exemplo {
+  display: flex;
+  gap: 30px;
+  background-color: var(--color-bg-box);
+  padding: 20px;
+}
+
+.gap-exemplo div {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* =========================================
+   DISPLAY: GRID
+========================================= */
+
+.exemplo-grid {
+  display: grid;
+  /* grid-template-rows: 200px 500px 100px;
+  grid-template-columns: 30% 65%; */
+  grid-template: 1fr 1fr / 1fr 2fr 1fr;
+  gap: var(--gap-default);
+}
+
+.exemplo-grid div {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 30px;
+  text-align: center;
+}
+
+/* =========================================
+   GRID - DUAS COLUNAS
+========================================= */
+
+.grid-duas-colunas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-default);
+}
+
+.grid-duas-colunas div {
+  background-color: var(--blue-bg);
+  border: 2px solid var(--blue-border);
+  padding: 30px;
+  text-align: center;
+}
+
+/* =========================================
+   GRID - QUATRO COLUNAS
+========================================= */
+
+.grid-quatro-colunas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-default);
+}
+
+.grid-quatro-colunas div {
+  background-color: var(--green-bg);
+  border: 2px solid var(--green-border);
+  padding: 30px;
+  text-align: center;
+}
+
+/* =========================================
+   DISPLAY: NONE
+========================================= */
+
+.none-exemplo {
+  display: flex;
+  gap: var(--gap-default);
+  background-color: var(--color-bg-box);
+  padding: 20px;
+}
+
+.none-exemplo div {
+  flex: 1;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 25px;
+  text-align: center;
+}
+
+.none-exemplo .elemento-oculto {
+  display: none;
+}
+
+
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 700px) {
+  .exemplo-inline-block div {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .comparacao.inline-block div {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .grid-quatro-colunas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
